@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NFC Attendance"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Web App URL (from your Google Sheet script)"
+            android:textSize="13sp"
+            android:paddingTop="4dp" />
+
+        <EditText
+            android:id="@+id/urlInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="https://script.google.com/macros/s/..../exec"
+            android:inputType="textUri"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/loadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save &amp; Load sheets"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Choose the sheet (tab)"
+            android:textSize="13sp"
+            android:paddingTop="12dp" />
+
+        <Spinner
+            android:id="@+id/sheetSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the URL and load your sheets to begin."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:minHeight="90dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#20808080" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marked this session: 0"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Card not reading? Add a reg number by hand:"
+            android:textSize="13sp"
+            android:paddingTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/manualInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="9-digit reg number"
+                android:inputType="number"
+                android:maxLength="9" />
+
+            <Button
+                android:id="@+id/manualBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hold a college ID card to the back of the phone to mark it present."
+            android:textSize="12sp"
+            android:paddingTop="20dp"
+            android:alpha="0.7" />
+
+    </LinearLayout>
+</ScrollView>
